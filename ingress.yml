@@ -9,7 +9,7 @@ metadata:
     nginx.ingress.kubernetes.io/session-cookie-max-age: "172800"
 spec:
   rules:
-    - host: demo.io
+    - host: ingress.demo.io
       http:
         paths:
           - path: /
