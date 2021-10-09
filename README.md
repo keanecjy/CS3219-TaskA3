@@ -40,8 +40,12 @@ Using this ip address, go to /etc/hosts file and add `<IP_ADDRESS> ingress.demo.
 
 Now we can access the endpoint at [https://ingress.demo.io](https://ingress.demo.io)
 ```shell
-curl -I https://ingress.demo.io
+curl -i http://ingress.demo.io
 ```
+
+![img_13.png](img_13.png)
+
+As seen here, we see that there is a cookie set in the field. Given the same cookie, the routing will always direct back to the same webpage.
 
 # CS3219-TaskA3 - Horizontal pod auto-scaler
 
