@@ -17,20 +17,30 @@ kubectl get pods -n ingress-nginx
 Deploy and create service
 ```shell
 kubectl apply -f deployment.yml
+```
+
+```shell
 kubectl get deployments
 ```
+![img_11.png](img_11.png)
+
+```shell
+kubectl get service
+```
+![img_10.png](img_10.png)
 
 Add Ingress controller. It can take awhile for the ip address to be set.
 ```shell
 kubectl apply -f ingress.yml
 kubectl get ingress
 ```
+![img_12.png](img_12.png)
 
-Using this ip address, go to /etc/hosts file and add `<IP_ADDRESS> demo.io` at the bottom of the file.
+Using this ip address, go to /etc/hosts file and add `<IP_ADDRESS> ingress.demo.io` at the bottom of the file.
 
-Now we can access the endpoint at [https://demo.io](https://demo.io)
+Now we can access the endpoint at [https://ingress.demo.io](https://ingress.demo.io)
 ```shell
-curl -I http://demo.io
+curl -I https://ingress.demo.io
 ```
 
 # CS3219-TaskA3 - Horizontal pod auto-scaler
