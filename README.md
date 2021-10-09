@@ -20,10 +20,17 @@ kubectl apply -f deployment.yml
 kubectl get deployments
 ```
 
-Add Ingress controller. It can take awhile for the ip address to be set for the ingress controller.
+Add Ingress controller. It can take awhile for the ip address to be set.
 ```shell
 kubectl apply -f ingress.yml
 kubectl get ingress
+```
+
+Using this ip address, go to /etc/hosts file and add `<IP_ADDRESS> demo.io` at the bottom of the file.
+
+Now we can access the endpoint at [https://demo.io](https://demo.io)
+```shell
+curl -I http://demo.io
 ```
 
 # CS3219-TaskA3 - Horizontal pod auto-scaler
