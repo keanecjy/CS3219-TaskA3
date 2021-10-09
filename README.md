@@ -38,7 +38,7 @@ kubectl get ingress
 
 Using this ip address, go to /etc/hosts file and add `<IP_ADDRESS> ingress.demo.io` at the bottom of the file.
 
-Now we can access the endpoint at [https://ingress.demo.io](https://ingress.demo.io)
+Now we can access the endpoint at [http://ingress.demo.io](http://ingress.demo.io)
 ```shell
 curl -i http://ingress.demo.io
 ```
